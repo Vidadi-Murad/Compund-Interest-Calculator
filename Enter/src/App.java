@@ -32,6 +32,8 @@ public class App {
     aMoney = pMoney * (1 + rPercent/yPercent);
 
     double powVarriable = yPercent * tYears;
+    double lastResult;
+    
 
     
 
