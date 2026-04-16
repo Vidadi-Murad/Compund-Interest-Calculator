@@ -12,8 +12,8 @@ public class App {
     // Variables
     double pMoney;
     double rPercent;
-    double yPercent;
-    double tYears;
+    int yPercent;
+    int tYears;
 
     // Labels for get data from user
     System.out.print("Enter the principal amount:");
@@ -23,22 +23,19 @@ public class App {
     rPercent = scanner.nextDouble();
 
     System.out.print("Enter the # of times compounded per year:");
-    yPercent = scanner.nextDouble();
+    yPercent = scanner.nextInt();
 
     System.out.print("Enter the # of years:");
-    tYears = scanner.nextDouble();
+    tYears = scanner.nextInt();
      
     double aMoney = 0;
-    aMoney = pMoney * (1 + rPercent/yPercent);
+    double dailyRate = rPercent / 100;
 
-    double powVarriable = yPercent * tYears;
-    double lastResult;
+     
+    aMoney = pMoney * Math.pow(1 + dailyRate/yPercent, yPercent * tYears);
+
+    System.out.printf("The Balance is: $%.2f", aMoney);
     
-
-    
-
-
-
 
     scanner.close();
     }
