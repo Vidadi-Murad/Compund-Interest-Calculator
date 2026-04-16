@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args){
+
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Compound Interest Calculator");
     
     // Variables
@@ -13,7 +15,19 @@ public class App {
     double yPercent;
     double tYears;
 
-    
+    // Labels for get data from user
+    System.out.print("Enter the principal amount:");
+    pMoney = scanner.nextDouble();
+     
+    System.out.print("Enter the interest rate (in %):");
+    rPercent = scanner.nextDouble();
 
+    System.out.print("Enter the # of times compounded per year:");
+    yPercent = scanner.nextDouble();
+
+    System.out.print("Enter the # of years:");
+    tYears = scanner.nextDouble();
+
+    scanner.close();
     }
 }
