@@ -27,6 +27,12 @@ public class App {
 
     System.out.print("Enter the # of years:");
     tYears = scanner.nextDouble();
+     
+    double aMoney = 0;
+    aMoney = pMoney * (1 + rPercent/yPercent);
+
+
+
 
     scanner.close();
     }
